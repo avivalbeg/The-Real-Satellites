@@ -11,7 +11,7 @@ function geoidglobe()
     [x, y, z] = ellipsoid(0, 0, 0, erad, erad, prad, npanels);
     globe = surf(x,y,z,'FaceColor','none','EdgeColor',.5*[1 1 1]);
     set(globe,'FaceColor','texturemap','CData',geoid)
-    set(globe,'FaceAlpha',.8,'EdgeColor','none');
+    set(globe,'FaceAlpha',1,'EdgeColor','none');
     axis equal;
     set(gcf,'Color','k')
     axis off;
