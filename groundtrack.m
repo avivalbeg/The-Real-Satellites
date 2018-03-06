@@ -1,6 +1,10 @@
 function groundtrack(X)
-    load geoid
-    load coastlines
+    if ~libisloaded('geoid')
+        load geoid
+    end
+    if ~libisloaded('coastlines')
+        load coastlines
+    end
     
     geoshow(geoid,geoidlegend,'DisplayType','texturemap')
     hold on;

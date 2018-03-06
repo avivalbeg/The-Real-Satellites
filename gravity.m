@@ -4,7 +4,7 @@ function dX = gravity(t,X)
         dX = [0 0 0 0 0 0]';
         return
     end
-    [agrav(1),agrav(2),agrav(3)] = gravitysphericalharmonic([X(1),X(2),X(3)], 'EGM96');
+    [agrav(1),agrav(2),agrav(3)] = gravitysphericalharmonic2([X(1),X(2),X(3)], 'EGM96',10);
     
     [adrag(1),adrag(2),adrag(3)] = atmospheremodel(X);
     
